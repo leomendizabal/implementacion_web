@@ -1,9 +1,5 @@
 package edu.ude.bedelia.web.config;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 public class WebConfig {
 
 	private final static String TEM_URL = "//%s:%s/%s";

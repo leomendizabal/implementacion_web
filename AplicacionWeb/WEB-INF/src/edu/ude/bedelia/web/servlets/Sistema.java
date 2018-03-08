@@ -20,7 +20,8 @@ public class Sistema {
 		this.fachadaInstance = (IFachada) Naming.lookup(url);
 	}
 
-	public static Sistema getInstancia(WebConfig config) throws MalformedURLException, RemoteException, NotBoundException {
+	public static Sistema getInstancia(WebConfig config)
+			throws MalformedURLException, RemoteException, NotBoundException {
 		if (instancia == null) {
 			instancia = new Sistema(config);
 		}

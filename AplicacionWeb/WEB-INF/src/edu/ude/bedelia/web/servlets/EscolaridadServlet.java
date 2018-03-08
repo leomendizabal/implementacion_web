@@ -11,16 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import edu.ude.bedelia.logica.excepciones.AlumnosException;
 import edu.ude.bedelia.logica.fachada.IFachada;
-import edu.ude.bedelia.logica.vo.VOAlumno;
 import edu.ude.bedelia.logica.vo.VOInscripcion;
 import edu.ude.bedelia.web.config.Constantes;
 import edu.ude.bedelia.web.config.StringsUtil;
 import edu.ude.bedelia.web.config.WebConfig;
-import valueObjects.DataPersona;
 
 public class EscolaridadServlet extends HttpServlet {
 
