@@ -27,9 +27,29 @@
     <servlet-name>Mensaje</servlet-name>
     <url-pattern>/Mensaje</url-pattern>
   </servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>EscolaridadServlet</servlet-name>
+	    <jsp-file>/escolaridad.jsp</jsp-file>
+	</servlet>
+	<!--mapping-->
+	<servlet-mapping>
+	    <servlet-name>EscolaridadServlet</servlet-name>
+	    <url-pattern>/escolaridad</url-pattern>   
+	</servlet-mapping>
 
+	<servlet>
+	    <servlet-name>EgresadosServlet</servlet-name>
+	    <jsp-file>/egresados.jsp</jsp-file>
+	</servlet>
+	<!--mapping-->
+	<servlet-mapping>
+	    <servlet-name>EgresadosServlet</servlet-name>
+	    <url-pattern>/egresados</url-pattern>   
+	</servlet-mapping>
+	
   <welcome-file-list>
-	<welcome-file>/Ingreso.jsp</welcome-file>
+	<welcome-file>/index.jsp</welcome-file>
   </welcome-file-list>
 
 </web-app>
