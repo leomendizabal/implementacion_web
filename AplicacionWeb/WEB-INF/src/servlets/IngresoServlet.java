@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import edu.ude.bedelia.logica.vo.VOAlumno;
 import valueObjects.DataPersona;
 
 public class IngresoServlet extends HttpServlet {
@@ -18,8 +19,7 @@ public class IngresoServlet extends HttpServlet {
 		// obtengo los datos del Request
 		String nombre = req.getParameter("nombre");
 		String procedencia = req.getParameter("procedencia");
-
-		// valido los datos ingresados
+		
 		boolean error = false;
 		String msgError = new String();
 		if ((nombre == null) || nombre.trim().equals("")) {

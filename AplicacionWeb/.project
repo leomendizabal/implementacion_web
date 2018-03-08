@@ -3,6 +3,7 @@
 	<name>AplicacionWeb</name>
 	<comment></comment>
 	<projects>
+		<project>upgraded-invention</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
