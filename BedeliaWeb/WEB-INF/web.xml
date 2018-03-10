@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<description> Mensajeador web de ejemplo </description>
+	<display-name>Mensajeador web de ejemplo</display-name>
+
+	<servlet>
+		<servlet-name>EscolaridadServlet</servlet-name>
+		<servlet-class>edu.ude.bedelias.servlets.EscolaridadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EscolaridadServlet</servlet-name>
+		<url-pattern>/escolaridad</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EgresadosServlet</servlet-name>
+		<servlet-class>edu.ude.bedelias.servlets.EgresadosServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EgresadosServlet</servlet-name>
+		<url-pattern>/egresados</url-pattern>
+	</servlet-mapping>
+
+
+
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

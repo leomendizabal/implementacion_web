@@ -5,9 +5,9 @@
     <exportSource>false</exportSource>
     <reloadable>true</reloadable>
     <redirectLogger>false</redirectLogger>
-    <updateXml>true</updateXml>
-    <warLocation>/home/santiago/Documentos/UDE/Taller 2/AplicacionWeb.war</warLocation>
+    <updateXml>false</updateXml>
+    <warLocation>/home/santiago/Documentos/UDE/Taller 2/BedeliaWeb.war</warLocation>
     <extraInfo></extraInfo>
     <mavenClasspath>false</mavenClasspath>
-    <webPath>/AplicacionWeb</webPath>
+    <webPath>/BedeliaWeb</webPath>
 </tomcatProjectProperties>

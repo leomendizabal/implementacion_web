@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="main-content-wrapper">
-		<form method="GET" url="escolaridadServlet">
+		<form action="GET" url="Escolaridad">
 			<input type="text" id="cedula" class="search-input" value="" placeholder="Cedula"/>
   			<button type="submit" class="search-button">Buscar</button>
 		</form>  		
