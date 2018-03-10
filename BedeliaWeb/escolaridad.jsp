@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="context" value="${pageContext.request.contextPath}" />
+<jsp:useBean id="escolaridad" scope="request" class="java.util.ArrayList" />
 
 <html>
   <head>
@@ -27,11 +28,11 @@
 		</div>
 	</div>
 	<div class="main-content-wrapper">
-		<form action="GET" url="Escolaridad">
-			<input type="text" id="cedula" class="search-input" value="" placeholder="Cedula"/>
+		<form method="GET" action="escolaridad">
+			<input type="text" id="cedula" name="cedula" class="search-input" value="" placeholder="Cedula"/>
   			<button type="submit" class="search-button">Buscar</button>
 		</form>  		
-		
+
 		<table>
 			<tr>
 				<th>Numero</th>
