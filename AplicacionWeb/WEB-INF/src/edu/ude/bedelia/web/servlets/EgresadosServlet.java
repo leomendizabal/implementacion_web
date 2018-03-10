@@ -25,6 +25,7 @@ public class EgresadosServlet extends HttpServlet {
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		try {
+			System.out.println("servlettttttttttttttttttttttttttttttttt");
 			final WebConfig configuracion = new WebConfig(
 					getServletContext().getInitParameter(Constantes.Configuraciones.CLAVE_IP),
 					getServletContext().getInitParameter(Constantes.Configuraciones.CLAVE_PUERTO),

@@ -27,10 +27,31 @@
 		</div>
 	</div>
 	<div class="main-content-wrapper">
-		<form method="GET" url="/escolaridadServlet">
+		<form method="GET" url="escolaridadServlet">
 			<input type="text" id="cedula" class="search-input" value="" placeholder="Cedula"/>
   			<button type="submit" class="search-button">Buscar</button>
 		</form>  		
+		
+		<table>
+			<tr>
+				<th>Numero</th>
+				<th>Asignatura</th>
+				<th>Año</th>
+				<th>Calificacion</th>
+			</tr>
+			<tr>
+				<td>119</td>
+				<td>Ingles</td>
+				<td>2018</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>120</td>
+				<td>Frances</td>
+				<td>2018</td>
+				<td>9</td>
+			</tr>
+		</table>
   	</div>
   	<footer>
   		footer

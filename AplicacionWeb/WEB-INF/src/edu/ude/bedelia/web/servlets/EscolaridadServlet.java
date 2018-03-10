@@ -27,6 +27,7 @@ public class EscolaridadServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		try {
+			
 			final WebConfig configuracion = new WebConfig(
 					getServletContext().getInitParameter(Constantes.Configuraciones.CLAVE_IP),
 					getServletContext().getInitParameter(Constantes.Configuraciones.CLAVE_PUERTO),
@@ -43,6 +44,10 @@ public class EscolaridadServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// obtengo los datos del Request
 		RequestDispatcher rd;
+		
+		rd = req.getRequestDispatcher("Error.jsp");
+		rd.forward(req, resp);
+		
 		// TODO: Pasar a constantes
 		final String cedula = req.getParameter(Constantes.RequestParam.PARAM_CI);
 		if (StringsUtil.isEmpty(cedula)) {

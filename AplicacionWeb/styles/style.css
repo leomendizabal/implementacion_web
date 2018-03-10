@@ -70,7 +70,7 @@ header{
 	height: calc(100% - 160px);
     width: 90%;
     margin: auto;
-    background-color: brown;
+    background-color: #ffffff47;
     padding: 20px;
 }
 
@@ -96,4 +96,14 @@ footer {
 
 .search-input {
 	
+}
+
+table {
+    width: 70%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    color: #002b45;
+    border: 1px solid #fff;
 }
