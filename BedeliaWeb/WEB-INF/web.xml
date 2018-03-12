@@ -8,7 +8,7 @@
 	
 	<context-param>
 		<param-name>ipservidor</param-name>
-		<param-value>192.168.0.100</param-value>
+		<param-value>192.168.0.103</param-value>
 	</context-param>
 	
 	<context-param>
