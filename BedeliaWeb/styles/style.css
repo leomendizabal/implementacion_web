@@ -1,3 +1,7 @@
+body {
+	font-family: 'Mark Bold',sans-serif;
+}
+
 header{
 	height: 90px;
     width: calc(100% - 45px);
@@ -13,18 +17,28 @@ header{
 		
 }
 
+.header-title:after {
+    background-color: #ff0049;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 40px;
+    top: 76px;
+}
+
 .menu {
 	top: 30%;
     display: block;
     width: 190px;
     height: 250px;
-    background-color: gray;
     padding: 20px;
     position: fixed;
     left: -200px;
     border-radius: 0 10px 10px 0;
     font-family: 'Open Sans',sans-serif;
     box-shadow: 0 1rem 1rem 0.1rem rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 .menu:hover {
@@ -74,6 +88,29 @@ header{
     padding: 20px;
 }
 
+.error-container img {
+	margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.error-container span {
+	font-size: 25px;
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.error-container a {
+	text-decoration: none;	
+}
+
+span.no-egresado-msg {
+	font-size: 25px;	
+}
+
 footer {
 	font-family: 'Open Sans',sans-serif;
 	height: 70px;
@@ -82,8 +119,8 @@ footer {
 }
 
 /*
-* Common Components
-*************************/
+* Common Classes & Components
+**********************************/
 .search-input,
 .search-button {
 	padding: 10px;
@@ -94,10 +131,6 @@ footer {
 	cursor: pointer;	
 }
 
-.search-input {
-	
-}
-
 table {
     width: 70%;
     text-align: center;
@@ -106,4 +139,21 @@ table {
     margin-top: 50px;
     color: #002b45;
     border: 1px solid #fff;
+	font-family: 'Mark Bold',sans-serif;
+}
+
+table th {    
+	font-weight: 600;
+    height: 30px;
+}
+
+span.msg {
+	color: red;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.text-center {
+	text-align: center;
 }

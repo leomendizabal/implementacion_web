@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="context" value="${pageContext.request.contextPath}" />
+<jsp:useBean id="egresados" scope="request" class="java.util.ArrayList" />
 
 <html>
   <head>
@@ -27,7 +29,27 @@
 		</div>
 	</div>
 	<div class="main-content-wrapper">
-  		
+		<c:choose>
+			<c:when test = "${fn:length(egresados) > 0}">
+		  		<table>
+					<tr>
+						<th>Cedula</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
+					</tr>
+					<c:forEach items="${egresados}" var="alumno">
+						<tr>
+						    <td>${alumno.cedula}</td>
+						    <td>${alumno.nombre}</td>
+						    <td>${alumno.apellido}</td>
+					  	<tr>
+					</c:forEach>
+				</table>
+			</c:when>
+			<c:otherwise>
+				<span class="msg text-center no-egresado-msg">No existen egresados</span>
+			</c:otherwise>	
+		</c:choose>
   	</div>
   	<footer>
   		footer

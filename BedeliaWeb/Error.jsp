@@ -1,19 +1,15 @@
 <jsp:useBean id='msgError' scope='request' class='java.lang.String' />  
+<c:set var="context" value="${pageContext.request.contextPath}" />
 
 <html>
   <head>
     <title>Mensaje de error</title>
   </head>
-  <body bgcolor="#FCF8C2">
-	<table border="5" width="50%" bordercolor="#FF8A8A" height="50" bgcolor="#FEE3BC">
-		<tr>
-			<td>
-				<p align="center"><b>
-				<font face="Tahoma" size="4"> Error </font></b>
-			</td>
-		</tr>
-	</table>
-	<p><b> ${msgError} </b></p>
-	<p><a href='Ingreso.jsp'>Volver al ingreso</a></p>		
+  <body>
+  	<div class="error-container">
+  		<img alt="error" src="resources/chef_error.png">
+  		<span class="error">Ha ocurrido un error</span>
+  		<a href="${context}/">Volver al inicio</a>
+  	</div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-package edu.ude.bedelias.servlets;
+package edu.ude.bedelia.servlets;
 
 import java.io.IOException;
 import java.rmi.Naming;
@@ -26,30 +26,22 @@ public class EscolaridadServlet extends HttpServlet {
 		// obtengo los datos del Request		
 		String ci = req.getParameter("cedula");
 		RequestDispatcher rd = null;
+		String ipservidor = (String) getServletContext().getInitParameter("ipservidor");
+		String puerto = (String) getServletContext().getInitParameter("puerto");
+		String objeto = (String) getServletContext().getInitParameter("objeto");
+		String url = "//" + ipservidor + ":" + puerto + "/" + objeto;
 		
-		/*if(ci != null) {
-			try {
-				IFachada fachada = (IFachada) Naming.lookup("192.168.0.102:1024");
+		try {
+			if(ci != null) {
+				IFachada fachada = (IFachada) Naming.lookup(url);
 				ArrayList<VOInscripcion> escolaridad = fachada.listarEscolaridad(ci, false);
 				req.setAttribute("escolaridad", escolaridad);
-				rd = req.getRequestDispatcher("escolaridad.jsp");
-			} catch (NotBoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (AlumnosException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}		
-		}*/
-		try {
-			IFachada fachada = (IFachada) Naming.lookup("//192.168.0.104:1024/bedelias");
-			ArrayList<VOInscripcion> escolaridad = fachada.listarEscolaridad("2222222", false);
-			req.setAttribute("escolaridad", escolaridad);
-		} catch (NotBoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+				req.setAttribute("cedula", ci);
+			}	
+		} catch (AlumnosException e) {
+			req.setAttribute("error", e.getMessage());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			rd = req.getRequestDispatcher("Error.jsp");
 			e.printStackTrace();
 		}
 		

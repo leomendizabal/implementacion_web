@@ -5,10 +5,25 @@
 
 	<description> Mensajeador web de ejemplo </description>
 	<display-name>Mensajeador web de ejemplo</display-name>
-
+	
+	<context-param>
+		<param-name>ipservidor</param-name>
+		<param-value>192.168.0.100</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>puerto</param-name>
+		<param-value>1024</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>objeto</param-name>
+		<param-value>bedelias</param-value>
+	</context-param>
+	
 	<servlet>
 		<servlet-name>EscolaridadServlet</servlet-name>
-		<servlet-class>edu.ude.bedelias.servlets.EscolaridadServlet</servlet-class>
+		<servlet-class>edu.ude.bedelia.servlets.EscolaridadServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -18,15 +33,13 @@
 
 	<servlet>
 		<servlet-name>EgresadosServlet</servlet-name>
-		<servlet-class>edu.ude.bedelias.servlets.EgresadosServlet</servlet-class>
+		<servlet-class>edu.ude.bedelia.servlets.EgresadosServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>EgresadosServlet</servlet-name>
 		<url-pattern>/egresados</url-pattern>
 	</servlet-mapping>
-
-
 
 	<welcome-file-list>
 		<welcome-file>/index.jsp</welcome-file>
