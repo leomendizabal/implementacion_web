@@ -62,8 +62,16 @@ header{
 	display: block;
 }
 
+.menu .content-wrapper .links-container .link-item a:hover {
+	color: #ff0049;
+}
+
 .menu .content-wrapper .links-container .link-item a {
+	display: block;
 	text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
 }
 		
 .menu .content-wrapper .menu-title {
@@ -73,6 +81,10 @@ header{
     margin: auto;
     top: 0;
     bottom: 0;
+    letter-spacing: 10px;
+    margin-right: -25px;
+    font-weight: 600;
+    color: #929292;
 }	
 
 .menu .content-wrapper .menu-title .letter {
@@ -88,19 +100,31 @@ header{
     padding: 20px;
 }
 
+.error-container {
+	text-align: center;	
+}
+
 .error-container img {
 	margin: auto;
-    position: absolute;
     left: 0;
     right: 0;
 }
 
 .error-container span {
-	font-size: 25px;
-    position: absolute;
+	display: block;
+    font-size: 25px;
     bottom: 40px;
     text-align: center;
     width: 100%;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.error-container .exception {
+    margin-bottom: 50px;
+    border: 1px solid red;
+    padding: 15px;
 }
 
 .error-container a {
@@ -132,6 +156,7 @@ footer {
 }
 
 table {
+	table-layout: fixed;
     width: 70%;
     text-align: center;
     margin-right: auto;

@@ -38,14 +38,13 @@ public class EscolaridadServlet extends HttpServlet {
 				req.setAttribute("escolaridad", escolaridad);
 				req.setAttribute("cedula", ci);
 			}	
-		} catch (AlumnosException e) {
-			req.setAttribute("error", e.getMessage());
+
+			rd = req.getRequestDispatcher("escolaridad.jsp");
 		} catch (Exception e) {
-			rd = req.getRequestDispatcher("Error.jsp");
-			e.printStackTrace();
+			req.setAttribute("error", e.getMessage());
+			rd = req.getRequestDispatcher("error.jsp");
 		}
 		
-		rd = req.getRequestDispatcher("escolaridad.jsp");
 		rd.forward(req, resp);
 	}
 }
