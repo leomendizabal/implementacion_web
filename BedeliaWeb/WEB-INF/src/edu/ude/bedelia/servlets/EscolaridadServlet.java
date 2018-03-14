@@ -2,8 +2,6 @@ package edu.ude.bedelia.servlets;
 
 import java.io.IOException;
 import java.rmi.Naming;
-import java.rmi.NotBoundException;
-import java.rmi.RMISecurityManager;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -23,16 +21,15 @@ public class EscolaridadServlet extends HttpServlet {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// obtengo los datos del Request		
+		// obtengo los datos del Request
 		String ci = req.getParameter("cedula");
 		RequestDispatcher rd = null;
 		String ipservidor = (String) getServletContext().getInitParameter("ipservidor");
 		String puerto = (String) getServletContext().getInitParameter("puerto");
 		String objeto = (String) getServletContext().getInitParameter("objeto");
-		String url = "//" + ipservidor + ":" + puerto + "/" + objeto;
-		
+		String url = UrlBuilder.buildUrl(ipservidor, puerto, objeto);
 		try {
-			if(ci != null) {
+			if (ci != null) {
 				IFachada fachada = (IFachada) Naming.lookup(url);
 				ArrayList<VOInscripcion> escolaridad = fachada.listarEscolaridad(ci, false);
 				req.setAttribute("escolaridad", escolaridad);
