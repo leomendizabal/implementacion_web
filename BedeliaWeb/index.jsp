@@ -17,6 +17,7 @@
 			<ul class="links-container">
 				<li class="link-item"><a href="${context}/escolaridad">Escolaridad</a></li>
 				<li class="link-item"><a href="${context}/egresados">Egresados</a></li>
+				<li class="link-item inicio"><a href="${context}">Inicio</a></li>			
 			</ul>
 			<div class="menu-title">
 				<span class="letter">M</span>
@@ -27,10 +28,8 @@
 		</div>
 	</div>
 	<div class="main-content-wrapper">
-  		
+  		<img alt="background" src="resources/cheff.jpg" />
   	</div>
-  	<footer>
-  		footer
-  	</footer>
+  	<footer></footer>
   </body>
 </html>

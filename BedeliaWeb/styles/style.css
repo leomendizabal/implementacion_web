@@ -62,6 +62,10 @@ header{
 	display: block;
 }
 
+.menu .content-wrapper .links-container .link-item.inicio {
+	margin-top: 180px;
+}
+
 .menu .content-wrapper .links-container .link-item a:hover {
 	color: #ff0049;
 }
@@ -98,6 +102,14 @@ header{
     margin: auto;
     background-color: #ffffff47;
     padding: 20px;
+    text-align: center;
+}
+
+.main-content-wrapper img {
+	opacity: 0.2;
+    width: auto;
+    max-height: 400px;
+    height: 100%;	
 }
 
 .error-container {

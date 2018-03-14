@@ -37,6 +37,9 @@ public class EscolaridadServlet extends HttpServlet {
 			}	
 
 			rd = req.getRequestDispatcher("escolaridad.jsp");
+		} catch (AlumnosException e) {
+			req.setAttribute("error", e.getMessage());		
+			rd = req.getRequestDispatcher("escolaridad.jsp");
 		} catch (Exception e) {
 			req.setAttribute("error", e.getMessage());
 			rd = req.getRequestDispatcher("error.jsp");
